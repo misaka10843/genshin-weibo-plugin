@@ -51,17 +51,17 @@ python getfull.py
 
 ## 文件目录及文件解释
 |
-<br>|-weibo-genshin.lua
-<br>|-genshinweibo
-<br>&nbsp&nbsp|-changejson.py
-<br>&nbsp&nbsp|-getfull.py
-<br>&nbsp&nbsp|-getweibo.py
-<br>&nbsp&nbsp|-msyh.ttc
-<br>&nbsp&nbsp|-run.sh
-<br>&nbsp&nbsp|-runafter.sh
-<br>&nbsp&nbsp|-weibo.json
-<br>&nbsp&nbsp|-weibo.txt
-<br>&nbsp&nbsp|-weibo1.json
+|-weibo-genshin.lua             <br>
+|-genshinweibo              <br>
+    |-changejson.py             <br>
+    |-getfull.py                <br>
+    |-getweibo.py               <br>
+    |-msyh.ttc              <br>
+    |-run.sh                <br>
+    |-runafter.sh               <br>
+    |-weibo.json                <br>
+    |-weibo.txt             <br>
+    |-weibo1.json               <br>
 
 其中，run.sh运行的是通过weiboAPI获得最新的博文，而runafter.sh则是运行的获取博文全文并且转换成图片
 
