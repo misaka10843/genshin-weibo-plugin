@@ -1,0 +1,1 @@
+/www/server/panel/pyenv/bin/python getfull.py
