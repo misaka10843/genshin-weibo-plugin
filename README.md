@@ -47,3 +47,7 @@ python getfull.py
 <br>
 
 现在您就可以直接设置定时任务：比如每隔半个小时运行```run.sh```即可
+
+### readme统计
+
+![统计](https://count.getloli.com/get/@misaka10843?theme=elbooru)
