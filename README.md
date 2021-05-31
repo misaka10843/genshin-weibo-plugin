@@ -48,6 +48,35 @@ python getfull.py
 
 现在您就可以直接设置定时任务：比如每隔半个小时运行```run.sh```即可
 
+
+## 文件目录及文件解释
+|
+|-weibo-genshin.lua
+|-genshinweibo
+    |-changejson.py
+    |-getfull.py
+    |-getweibo.py
+    |-msyh.ttc
+    |-run.sh
+    |-runafter.sh
+    |-weibo.json
+    |-weibo.txt
+    |-weibo1.json
+
+其中，run.sh运行的是通过weiboAPI获得最新的博文，而runafter.sh则是运行的获取博文全文并且转换成图片
+
+下面来说说**具体流程**
+
+weibo.txt是getweibo.py通过weiboAPI获取的微博博文ID，然后运行changejson.py来规范json语法并且只读取最新的博文id（因为置顶占用最新的id所以只要获取第二行的id既是最新博文）
+
+在changejson.py会对比weibo.json与weibo1.json的id（也就是看到底是不是最新的，这样有助于减少使用量）如果是最新的就不会进行操作并且输出提示，如果不是最新的则会将weibo.json复制成weibo1.json
+
+而且运行runafter.sh，进而运行getfull.py，在getfull.py中，会通过weiboAPI获取正文并且转换成图片，提供给weibo-genshin.lua使用
+
+## BUG反馈
+
+您可以提交issues或者去往论坛[点击这里](http://sakura-forum.pysio.online/t/github-bug)来告诉我qwq
+
 ### readme统计
 
 ![统计](https://count.getloli.com/get/@misaka10843?theme=elbooru)
